@@ -7,11 +7,11 @@ This repository contains two main scripts for **Object Detection** and **Image C
 ## 1. Overview
 
 - **Detection**  
-  - **Script**: `mlflow_detection.py`  
+  - **Script**: `detection-mlflow.py`  
   - **Purpose**: Uses YOLO for object detection with bounding boxes.
 
 - **Classification**  
-  - **Script**: `mlflow_classify.py`  
+  - **Script**: `classify-mlflow.py`  
   - **Purpose**: Uses YOLO for multi-class image classification.
 
 Both scripts support resuming training from a previous run by saving and loading **run IDs** and **model checkpoints**.
@@ -50,7 +50,7 @@ In both scripts, update the following variables at the top of the file:
 
 Each script contains configurable variables for model and dataset paths.
 
-- **For Object Detection (in `mlflow_detection.py`)**
+- **For Object Detection (in `detection-mlflow.py`)**
   Model Configuration
   ```python
   MODEL_NAME = "yolo11n.pt"  # Path to your YOLO detection model
@@ -61,7 +61,7 @@ Each script contains configurable variables for model and dataset paths.
   # Ensure your dataset follows the YOLO structure (separate folders for images and labels).
   ```
 
-- **For Image Classification (in `mlflow_classify.py`)**
+- **For Image Classification (in `classify-mlflow.py`)**
   Model Configuration
   ```python
   MODEL_ARCH = "yolo11n-cls.pt"  # Path to your YOLO classification model
